@@ -1,0 +1,429 @@
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  padding: 0 5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 100;
+
+  background: rgba(8, 8, 8, 0.65);
+  backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-logo {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: #8d8d8d;
+
+  transition:
+    color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  background: white;
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-connect {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+
+  padding: 11px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.nav-connect:hover {
+  background: white;
+  color: black;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 10vw 80px;
+
+  overflow: hidden;
+}
+
+
+/* Background grid */
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+}
+
+
+/* Soft glow */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  top: 10%;
+  right: 5%;
+
+  background: radial-gradient(
+    circle,
+    rgba(110, 110, 255, 0.12),
+    transparent 65%
+  );
+
+  filter: blur(40px);
+
+  pointer-events: none;
+}
+
+
+/* Hero content */
+
+.hero-content {
+  position: relative;
+
+  max-width: 1000px;
+
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  margin-bottom: 28px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+
+  color: #858585;
+
+  letter-spacing: 0.16em;
+}
+
+.hero h1 {
+  font-size: clamp(70px, 11vw, 170px);
+
+  line-height: 0.86;
+
+  letter-spacing: -0.075em;
+
+  font-weight: 700;
+
+  max-width: 1000px;
+}
+
+.hero h1 span {
+  display: block;
+
+  color: #747474;
+}
+
+.hero-description {
+  max-width: 470px;
+
+  margin-top: 45px;
+
+  color: #999;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+
+  gap: 14px;
+
+  margin-top: 35px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 15px;
+
+  padding: 14px 20px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.06em;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.primary-button {
+  background: white;
+  color: black;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: #aaa;
+}
+
+.secondary-button:hover {
+  border-color: white;
+  color: white;
+
+  transform: translateY(-3px);
+}
+
+
+/* Status */
+
+.hero-status {
+  position: absolute;
+
+  left: 10vw;
+  bottom: 45px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  color: #707070;
+
+  letter-spacing: 0.08em;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #7cffb2;
+
+  box-shadow: 0 0 12px rgba(124, 255, 178, 0.6);
+}
+
+
+/* Index */
+
+.hero-index {
+  position: absolute;
+
+  right: 5vw;
+  bottom: 45px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: #555;
+}
+
+
+/* Scroll */
+
+.scroll-indicator {
+  position: absolute;
+
+  right: 5vw;
+  top: 50%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  writing-mode: vertical-rl;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  color: #555;
+
+  letter-spacing: 0.1em;
+}
+
+.scroll-indicator span {
+  width: 1px;
+  height: 50px;
+
+  background: #444;
+
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+
+/* ================================
+   ANIMATION
+================================ */
+
+@keyframes scrollLine {
+
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-connect {
+    font-size: 9px;
+  }
+
+  .hero {
+    padding: 120px 24px 100px;
+  }
+
+  .hero h1 {
+    font-size: clamp(65px, 18vw, 110px);
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-status {
+    left: 24px;
+    bottom: 30px;
+  }
+
+  .hero-index {
+    right: 24px;
+    bottom: 30px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+}
