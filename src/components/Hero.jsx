@@ -11,7 +11,7 @@ function Hero() {
         </p>
 
         <h1>
-          Sai Sneha
+          Sai sneha
           <span>Gunda</span>
         </h1>
 
