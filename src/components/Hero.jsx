@@ -12,7 +12,7 @@ function Hero() {
 
         <h1>
           Sai Sneha
-          <span>Gunda.</span>
+          <span>Gunda</span>
         </h1>
 
         <p className="hero-description">
