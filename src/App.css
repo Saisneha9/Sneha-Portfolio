@@ -762,3 +762,337 @@
   }
 
 }
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+.about-section {
+  position: relative;
+
+  padding: 180px 10vw 160px;
+
+  background: #080808;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* Section label */
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 100px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: #777;
+
+  letter-spacing: 0.12em;
+}
+
+.section-label span {
+  color: #444;
+}
+
+
+/* Small heading */
+
+.section-eyebrow {
+  margin-bottom: 22px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: #666;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* Main about layout */
+
+.about-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.9fr)
+    minmax(300px, 1fr);
+
+  gap: 12vw;
+
+  max-width: 1300px;
+
+  margin: 0 auto;
+}
+
+
+/* Heading */
+
+.about-heading h2 {
+  max-width: 600px;
+
+  font-size: clamp(48px, 6vw, 88px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.06em;
+
+  font-weight: 600;
+}
+
+.about-heading h2 span {
+  display: block;
+
+  color: #777;
+}
+
+
+/* Text */
+
+.about-text {
+  max-width: 580px;
+
+  padding-top: 45px;
+}
+
+.about-intro {
+  margin-bottom: 35px;
+
+  font-size: 23px;
+
+  line-height: 1.55;
+
+  color: #e7e7e7;
+}
+
+.about-text p:not(.about-intro) {
+  margin-bottom: 24px;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #777;
+}
+
+
+/* ========================================
+   CURRENTLY
+======================================== */
+
+.currently-section {
+  max-width: 1300px;
+
+  margin: 180px auto 0;
+}
+
+.currently-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 55px;
+}
+
+.currently-header h3 {
+  font-size: clamp(40px, 5vw, 70px);
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+
+  font-weight: 600;
+}
+
+.currently-header h3 span {
+  color: #666;
+}
+
+
+/* Year */
+
+.currently-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: #666;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* Cards */
+
+.currently-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.currently-card {
+  position: relative;
+
+  min-height: 280px;
+
+  padding: 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  overflow: hidden;
+
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+.currently-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+
+  right: -100px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  filter: blur(30px);
+
+  transition:
+    transform 0.5s ease;
+}
+
+.currently-card:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.currently-card:hover::before {
+  transform: scale(2);
+}
+
+
+/* Card number */
+
+.card-number {
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: #444;
+}
+
+
+/* Card content */
+
+.card-category {
+  margin-bottom: 12px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  color: #555;
+
+  letter-spacing: 0.12em;
+}
+
+.currently-card h4 {
+  margin-bottom: 15px;
+
+  font-size: 26px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+}
+
+.currently-card p:last-child {
+  max-width: 390px;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #707070;
+}
+
+
+/* ========================================
+   ABOUT MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+  .about-section {
+    padding: 120px 24px;
+  }
+
+  .section-label {
+    margin-bottom: 70px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .about-text {
+    padding-top: 0;
+  }
+
+  .about-intro {
+    font-size: 19px;
+  }
+
+  .currently-section {
+    margin-top: 120px;
+  }
+
+  .currently-header {
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .currently-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .currently-card {
+    min-height: 240px;
+
+    padding: 28px;
+  }
+
+}
