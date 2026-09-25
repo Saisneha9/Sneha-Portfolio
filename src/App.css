@@ -427,3 +427,338 @@
   }
 
 }
+/* ========================================
+   INTERACTIVE HERO SYSTEM
+======================================== */
+
+.hero-visual {
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: 4vw;
+  top: 50%;
+
+  transform:
+    translate(
+      calc(-50% + var(--mouse-x, 0) * 18px),
+      calc(-50% + var(--mouse-y, 0) * 18px)
+    );
+
+  transition: transform 0.2s ease-out;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* Main core */
+
+.system-core {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 100px;
+  height: 100px;
+
+  transform:
+    translate(-50%, -50%)
+    translate(
+      calc(var(--mouse-x, 0) * -8px),
+      calc(var(--mouse-y, 0) * -8px)
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0.02) 60%
+    );
+
+  box-shadow:
+    0 0 50px rgba(120, 120, 255, 0.12),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(10px);
+
+  z-index: 5;
+
+  transition: transform 0.3s ease-out;
+}
+
+.system-core span {
+  font-family: "DM Mono", monospace;
+
+  font-size: 13px;
+
+  letter-spacing: -0.05em;
+
+  color: white;
+}
+
+
+/* Orbit rings */
+
+.orbital {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  animation: rotateOrbit 18s linear infinite;
+}
+
+.orbital-one {
+  width: 230px;
+  height: 230px;
+
+  animation-duration: 18s;
+}
+
+.orbital-two {
+  width: 350px;
+  height: 350px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(65deg);
+
+  animation-duration: 24s;
+
+  animation-direction: reverse;
+}
+
+.orbital-three {
+  width: 470px;
+  height: 470px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(120deg);
+
+  animation-duration: 32s;
+}
+
+
+/* Nodes */
+
+.system-node {
+  position: absolute;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  background: rgba(10, 10, 10, 0.8);
+
+  backdrop-filter: blur(8px);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  color: #999;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+
+  z-index: 6;
+}
+
+.system-node:hover {
+  color: white;
+
+  border-color: rgba(255, 255, 255, 0.6);
+
+  transform: scale(1.15);
+}
+
+
+/* Individual node positions */
+
+.node-one {
+  left: 50%;
+  top: 5%;
+
+  transform:
+    translateX(-50%)
+    translate(
+      calc(var(--mouse-x, 0) * 10px),
+      calc(var(--mouse-y, 0) * 10px)
+    );
+}
+
+.node-two {
+  right: 5%;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    translate(
+      calc(var(--mouse-x, 0) * 14px),
+      calc(var(--mouse-y, 0) * 14px)
+    );
+}
+
+.node-three {
+  left: 15%;
+  bottom: 12%;
+
+  transform:
+    translate(
+      calc(var(--mouse-x, 0) * -10px),
+      calc(var(--mouse-y, 0) * -10px)
+    );
+}
+
+.node-four {
+  left: 3%;
+  top: 30%;
+
+  transform:
+    translate(
+      calc(var(--mouse-x, 0) * -15px),
+      calc(var(--mouse-y, 0) * -15px)
+    );
+}
+
+
+/* Connection lines */
+
+.connection {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.22),
+      transparent
+    );
+
+  transform-origin: left center;
+
+  z-index: 2;
+}
+
+.connection-one {
+  width: 220px;
+
+  transform:
+    rotate(-90deg)
+    translateX(0);
+}
+
+.connection-two {
+  width: 210px;
+
+  transform: rotate(0deg);
+}
+
+.connection-three {
+  width: 230px;
+
+  transform: rotate(145deg);
+}
+
+.connection-four {
+  width: 190px;
+
+  transform: rotate(205deg);
+}
+
+
+/* Orbit animation */
+
+@keyframes rotateOrbit {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+
+}
+
+
+/* ========================================
+   MOBILE HERO VISUAL
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .hero-visual {
+    width: 420px;
+    height: 420px;
+
+    right: -120px;
+
+    opacity: 0.55;
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .hero-visual {
+    width: 330px;
+    height: 330px;
+
+    right: -120px;
+    top: 38%;
+
+    opacity: 0.3;
+  }
+
+  .system-core {
+    width: 70px;
+    height: 70px;
+  }
+
+  .system-node {
+    width: 38px;
+    height: 38px;
+
+    font-size: 7px;
+  }
+
+}
