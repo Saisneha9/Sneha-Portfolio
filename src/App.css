@@ -1096,3 +1096,288 @@
   }
 
 }
+/* ================================
+   PROJECTS
+================================ */
+
+.projects-section {
+  position: relative;
+  padding: 160px 7vw;
+  background: #080808;
+  overflow: hidden;
+}
+
+.projects-heading {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 80px;
+  align-items: end;
+  margin-top: 50px;
+  margin-bottom: 90px;
+}
+
+.projects-heading h2 {
+  max-width: 800px;
+  margin-top: 18px;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 600;
+}
+
+.projects-heading h2 span {
+  display: block;
+  color: #777;
+}
+
+.projects-intro {
+  max-width: 400px;
+  color: #888;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+/* PROJECT LIST */
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+
+/* PROJECT CARD */
+
+.project-card {
+  position: relative;
+  padding: 42px 0;
+  border-top: 1px solid #242424;
+  transition:
+    padding 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.project-card:last-child {
+  border-bottom: 1px solid #242424;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025),
+      transparent
+    );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card:hover {
+  padding-left: 25px;
+  border-color: #444;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+
+/* HEADER */
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.project-number {
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.project-category {
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: #666;
+}
+
+
+/* MAIN */
+
+.project-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.project-main h3 {
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  margin-bottom: 18px;
+  transition: transform 0.4s ease;
+}
+
+.project-main p {
+  max-width: 650px;
+  color: #777;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.project-card:hover .project-main h3 {
+  transform: translateX(8px);
+}
+
+
+/* ARROW */
+
+.project-arrow {
+  width: 65px;
+  height: 65px;
+  border: 1px solid #292929;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2rem;
+  color: #777;
+
+  flex-shrink: 0;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.project-card:hover .project-arrow {
+  transform: rotate(45deg);
+  background: #f5f5f5;
+  color: #080808;
+  border-color: #f5f5f5;
+}
+
+
+/* FOOTER */
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-technologies span {
+  padding: 7px 12px;
+  border: 1px solid #252525;
+  border-radius: 100px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  color: #777;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.project-card:hover .project-technologies span {
+  color: #aaa;
+  border-color: #383838;
+}
+
+
+/* LINKS */
+
+.project-links {
+  display: flex;
+  gap: 25px;
+}
+
+.project-links a {
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  color: #777;
+
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #fff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .projects-section {
+    padding: 110px 6vw;
+  }
+
+  .projects-heading {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .projects-heading h2 {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+  }
+
+  .projects-intro {
+    max-width: 100%;
+  }
+
+  .project-card {
+    padding: 32px 0;
+  }
+
+  .project-card:hover {
+    padding-left: 0;
+  }
+
+  .project-card-content {
+    align-items: flex-start;
+  }
+
+  .project-main h3 {
+    font-size: 2.2rem;
+  }
+
+  .project-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .project-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-links {
+    width: 100%;
+  }
+
+}
