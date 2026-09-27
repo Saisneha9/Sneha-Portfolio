@@ -1381,3 +1381,443 @@
   }
 
 }
+
+/* ================================
+   INTERACTIVE CASE STUDIES
+================================ */
+
+.project-arrow {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.project-arrow-active {
+  transform: rotate(0deg) !important;
+  background: #f5f5f5;
+  color: #080808;
+  border-color: #f5f5f5;
+}
+
+.project-card-active {
+  border-color: #555;
+}
+
+.case-study {
+  margin-top: 45px;
+  padding: 35px;
+  border: 1px solid #282828;
+  border-radius: 12px;
+  background: #0d0d0f;
+  animation: caseStudyEnter 0.35s ease both;
+}
+
+@keyframes caseStudyEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.case-study-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #292929;
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: #777;
+}
+
+.case-study-overview {
+  padding: 35px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.case-study-label {
+  margin-bottom: 14px;
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: #aaa;
+}
+
+.case-study-overview > p:last-child {
+  max-width: 850px;
+  color: #aaa;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 50px;
+}
+
+.case-study-item {
+  padding: 28px 0;
+  border-bottom: 1px solid #242424;
+}
+
+.case-study-item h4 {
+  margin-bottom: 12px;
+  color: #eee;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.case-study-item p {
+  color: #888;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.case-study-close {
+  margin-top: 30px;
+  padding: 12px 18px;
+  border: 1px solid #383838;
+  border-radius: 100px;
+  background: transparent;
+  color: #ccc;
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.case-study-close:hover {
+  background: #f5f5f5;
+  color: #080808;
+}
+
+@media (max-width: 768px) {
+  .case-study {
+    padding: 22px;
+    margin-top: 30px;
+  }
+
+  .case-study-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-heading {
+    font-size: 0.58rem;
+  }
+
+  .case-study-overview > p:last-child {
+    font-size: 0.95rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-study {
+    animation: none;
+  }
+}
+/* ========================================
+   TECHNOLOGY SECTION
+======================================== */
+
+.tech-section {
+  position: relative;
+
+  padding: 180px 10vw 180px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  background: #080808;
+}
+
+
+/* Heading */
+
+.tech-heading {
+  max-width: 1300px;
+
+  margin: 0 auto 100px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 1fr)
+    minmax(250px, 0.55fr);
+
+  gap: 10vw;
+
+  align-items: end;
+}
+
+.tech-heading h2 {
+  max-width: 650px;
+
+  font-size: clamp(48px, 6vw, 85px);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+
+  font-weight: 600;
+}
+
+.tech-heading h2 span {
+  display: block;
+
+  color: #666;
+}
+
+.tech-intro {
+  max-width: 400px;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #707070;
+}
+
+
+/* Grid */
+
+.tech-grid {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* Card */
+
+.tech-card {
+  position: relative;
+
+  min-height: 310px;
+
+  padding: 32px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  overflow: hidden;
+
+  transition:
+    background 0.5s ease;
+}
+
+
+/* Animated background */
+
+.tech-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -180px;
+  top: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(120, 120, 255, 0.07);
+
+  filter: blur(50px);
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
+
+  opacity: 0;
+}
+
+.tech-card:hover::before {
+  opacity: 1;
+
+  transform: scale(1.6);
+}
+
+.tech-card:hover {
+  background: rgba(255, 255, 255, 0.018);
+}
+
+
+/* Top */
+
+.tech-card-top {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.tech-number,
+.tech-category {
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.1em;
+}
+
+.tech-number {
+  color: #444;
+}
+
+.tech-category {
+  color: #555;
+}
+
+
+/* Main */
+
+.tech-card-main {
+  position: relative;
+
+  z-index: 2;
+}
+
+.tech-card-main h3 {
+  margin-bottom: 14px;
+
+  font-size: clamp(28px, 3vw, 42px);
+
+  font-weight: 500;
+
+  letter-spacing: -0.04em;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.tech-card:hover .tech-card-main h3 {
+  transform: translateX(8px);
+}
+
+.tech-card-main p {
+  max-width: 400px;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #6d6d6d;
+}
+
+
+/* Tags */
+
+.tech-tags {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.tech-tags span {
+  padding: 7px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  color: #666;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.tech-card:hover .tech-tags span {
+  color: #aaa;
+
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+
+/* Arrow */
+
+.tech-arrow {
+  position: absolute;
+
+  right: 28px;
+  bottom: 28px;
+
+  font-size: 18px;
+
+  color: #444;
+
+  transform: translate(-5px, 5px);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.tech-card:hover .tech-arrow {
+  opacity: 1;
+
+  transform: translate(0, 0);
+
+  color: white;
+}
+
+
+/* ========================================
+   TECHNOLOGY MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+  .tech-section {
+    padding: 120px 24px;
+  }
+
+  .tech-heading {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 60px;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-card {
+    min-height: 270px;
+
+    padding: 26px;
+  }
+
+}
