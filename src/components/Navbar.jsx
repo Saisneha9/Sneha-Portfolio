@@ -10,11 +10,11 @@ function Navbar() {
         <a href="#work">Work</a>
         <a href="#lab">Lab</a>
         <a href="#research">Research</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Contact </a>
       </div>
 
       <a href="#contact" className="nav-connect">
-        Let's Connect ↗
+        Let's Connect😊↗
       </a>
     </nav>
   );
