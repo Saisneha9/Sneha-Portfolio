@@ -2119,7 +2119,7 @@
 @media (prefers-reduced-motion: reduce) {
   .lab-card,
   .lab-details {
-    animation: none;
+    animation: none;ss
     transition: none;
   }
 }
