@@ -1,27 +1,25 @@
-
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import TechUniverse from "./components/TechUniverse";
-import Projects from "./components/Projects";
-import LearningLab from "./components/LearningLab";
-import Research from "./components/Research";
-
-function App() {
+function About() {
   return (
-    <div className="app">
-      <Navbar />
+    <section id="about" className="about-section">
+      <div className="section-label">
+        01 / ABOUT ME
+      </div>
 
-      <main>
-        <Hero />
-        <About />
-        <TechUniverse />
-        <Projects />
-        <LearningLab />
-        <Research />
-      </main>
-    </div>
+      <h2>
+        Building a foundation
+        <br />
+        for what's next.
+      </h2>
+
+      <p>
+        I'm Sai Sneha Gunda, a Computer Science
+        undergraduate specializing in AI.
+        I'm interested in software engineering,
+        artificial intelligence and building
+        meaningful technology.
+      </p>
+    </section>
   );
 }
 
-export default App;
+export default About;
