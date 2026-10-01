@@ -5,6 +5,8 @@ import About from "./components/About";
 import TechUniverse from "./components/TechUniverse";
 import Projects from "./components/Projects";
 import LearningLab from "./components/LearningLab";
+import Research from "./components/Research";
+import Journey from "./components/Journey";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <TechUniverse />
         <Projects />
         <LearningLab />
+        <Research />
+        <Journey />
       </main>
     </div>
   );

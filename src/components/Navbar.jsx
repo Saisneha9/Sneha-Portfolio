@@ -10,6 +10,7 @@ function Navbar() {
         <a href="#work">Work</a>
         <a href="#lab">Lab</a>
         <a href="#research">Research</a>
+        <a href="#journey">Journey</a>
         <a href="#contact">Contact </a>
       </div>
 
