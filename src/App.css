@@ -2608,3 +2608,197 @@
     transition: none;
   }
 }
+/* BEYOND CODE */
+
+.beyond-section {
+  padding: 120px 9%;
+  position: relative;
+  overflow: hidden;
+}
+
+.beyond-heading {
+  max-width: 700px;
+  margin-bottom: 55px;
+}
+
+.beyond-heading .section-label {
+  font-family: "DM Mono", monospace;
+  color: #8e8e8e;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.beyond-heading h2 {
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+  margin: 22px 0;
+}
+
+.beyond-heading h2 span {
+  color: #9292a0;
+}
+
+.beyond-heading > p {
+  max-width: 480px;
+  color: #999;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.beyond-card {
+  position: relative;
+  padding: 28px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(
+    145deg,
+    #15151a,
+    #0c0c0f
+  );
+  border: 1px solid #25252c;
+  border-radius: 16px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.beyond-card:hover,
+.beyond-card.active {
+  transform: translateY(-5px);
+  border-color: #68627f;
+  background: linear-gradient(
+    145deg,
+    #1b1a23,
+    #0c0c0f
+  );
+}
+
+.beyond-card-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #858590;
+}
+
+.beyond-card h3 {
+  font-size: 23px;
+  letter-spacing: -0.7px;
+  margin-top: 45px;
+  margin-bottom: 14px;
+}
+
+.beyond-card > p {
+  color: #9999a3;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.beyond-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  margin-bottom: 24px;
+}
+
+.beyond-tags span {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  color: #c5c5d0;
+  padding: 7px 10px;
+  border: 1px solid #303039;
+  border-radius: 20px;
+}
+
+.beyond-toggle {
+  background: transparent;
+  color: #d4c8ff;
+  border: none;
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.beyond-toggle:hover {
+  color: #fff;
+}
+
+.beyond-extra {
+  width: 100%;
+  border-top: 1px solid #303039;
+  margin-top: 18px;
+  padding-top: 16px;
+  animation: beyondReveal 0.25s ease;
+}
+
+.beyond-extra span {
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  color: #a99be5;
+  letter-spacing: 1.5px;
+}
+
+.beyond-extra p {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+@keyframes beyondReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .beyond-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .beyond-section {
+    padding: 80px 6%;
+  }
+
+  .beyond-heading h2 {
+    letter-spacing: -1.5px;
+  }
+
+  .beyond-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .beyond-card {
+    min-height: 280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beyond-card,
+  .beyond-extra {
+    animation: none;
+    transition: none;
+  }
+}

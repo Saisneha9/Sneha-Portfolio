@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import LearningLab from "./components/LearningLab";
 import Research from "./components/Research";
 import Journey from "./components/Journey";
-
+import BeyondCode from "./components/BeyondCode";
 function App() {
   return (
     <div className="app">
@@ -19,6 +19,7 @@ function App() {
         <LearningLab />
         <Research />
         <Journey />
+        <BeyondCode />
       </main>
     </div>
   );

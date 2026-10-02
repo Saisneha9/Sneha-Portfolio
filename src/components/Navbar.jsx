@@ -11,7 +11,9 @@ function Navbar() {
         <a href="#lab">Lab</a>
         <a href="#research">Research</a>
         <a href="#journey">Journey</a>
+        <a href="#beyond">Beyond Code</a>
         <a href="#contact">Contact </a>
+
       </div>
 
       <a href="#contact" className="nav-connect">
