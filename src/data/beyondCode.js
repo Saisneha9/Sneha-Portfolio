@@ -4,8 +4,7 @@ export const beyondCode = [
     title: "Design & Creativity",
     category: "CREATIVE",
     description:
-      "Exploring visual design, thoughtful layouts,
-      and creative ways to present ideas.",
+      "Exploring visual design, thoughtful layouts, and creative ways to present ideas.",
     tags: ["UI Design", "Visual Thinking"],
   },
   {
@@ -13,9 +12,7 @@ export const beyondCode = [
     title: "Travel & Exploration",
     category: "LIFESTYLE",
     description:
-      "Discovering new places, experiencing
-      different environments, and finding
-      inspiration beyond my everyday routine.",
+      "Discovering new places, experiencing different environments, and finding inspiration beyond my everyday routine.",
     tags: ["Travel", "Exploration"],
   },
   {
@@ -23,9 +20,7 @@ export const beyondCode = [
     title: "Continuous Learning",
     category: "MINDSET",
     description:
-      "Learning new concepts, experimenting
-      with ideas, and expanding my knowledge
-      beyond the classroom.",
+      "Learning new concepts, experimenting with ideas, and expanding my knowledge beyond the classroom.",
     tags: ["Learning", "Curiosity"],
   },
 ];
