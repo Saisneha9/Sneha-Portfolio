@@ -179,7 +179,7 @@ function Projects() {
           );
         })}
       </div>
-    </section>d
+    </section>
   );
 }
 
