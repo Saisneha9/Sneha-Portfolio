@@ -17,7 +17,7 @@ function Navbar() {
       </div>
 
       <a href="#contact" className="nav-connect">
-        Let's Connect😊↗
+        Let's Connect!😊↗
       </a>
     </nav>
   );
