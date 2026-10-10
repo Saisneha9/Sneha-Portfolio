@@ -3153,3 +3153,75 @@
     transition: none;
   }
 }
+
+/* DAY 12 — GLOBAL VISUAL POLISH */
+
+.app {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  background: #080808;
+}
+
+.app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+  opacity: 0.35;
+}
+
+main > section {
+  position: relative;
+}
+
+/* Consistent section boundaries */
+.about-section,
+.tech-section,
+.projects-section,
+.lab-section,
+.research-section,
+.journey-section,
+.beyond-section,
+.contact-section {
+  scroll-margin-top: 90px;
+}
+
+/* Consistent interaction feedback */
+a,
+button {
+  transition-timing-function: ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Avoid unwanted horizontal overflow */
+.app,
+main {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .app::before {
+    background-size: 42px 42px;
+    opacity: 0.25;
+  }
+}
+
